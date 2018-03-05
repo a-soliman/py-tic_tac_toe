@@ -93,7 +93,10 @@ class TicTacToe:
 				return False
 		return 'EVEN'
 	
-
+	def reset_board(self):
+		self.board = [ " " for i in range(9) ]
+	
+	
 
 
 

@@ -96,7 +96,8 @@ class TicTacToe:
 	def reset_board(self):
 		self.board = [ " " for i in range(9) ]
 	
-	
+	def print_score(self):
+		print('{} => {}  VS. {} => {}'.format(self.player1["name"], self.player1["score"], self.player2["name"], self.player2["score"]))
 
 
 

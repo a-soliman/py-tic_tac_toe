@@ -101,19 +101,19 @@ class TicTacToe:
 
 
 
-# answer = input('Hey, would you like to play a game?: (y / n) ').lower()
+answer = input('Hey, would you like to play a game?: (y / n) ').lower()
 
-# if answer == 'y':
-# 	player1_name = input("Please enter player1's name:  ").strip().capitalize()
-# 	player2_name = input("Please enter player2's name:  ").strip().capitalize()
+if answer == 'y':
+	player1_name = input("Please enter player1's name:  ").strip().capitalize()
+	player2_name = input("Please enter player2's name:  ").strip().capitalize()
 
 	
 
-# game = TicTacToe()
+game = TicTacToe()
 
-# if len(player1_name) > 0:
-# 	game.player1["name"] = player1_name
-# if len(player2_name) > 0:
-# 	game.player2["name"] = player2_name
+if len(player1_name) > 0:
+	game.player1["name"] = player1_name
+if len(player2_name) > 0:
+	game.player2["name"] = player2_name
 
-# game.start_game()
+game.start_game()

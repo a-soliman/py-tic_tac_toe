@@ -63,7 +63,37 @@ class TicTacToe:
 		if replay == 'y':
 			self.start_game()
 
+	def check_status(self, player):
+		
+		#check horizontally
+		simple = player["simple"]
+
+		row1 = self.board[0:3:]
+		row2 = self.board[3:6:]
+		row3 = self.board[6::]
+		col1 = [ self.board[0], self.board[3], self.board[6]]
+		col2 = [ self.board[1], self.board[4], self.board[7]]
+		col3 = [ self.board[2], self.board[5], self.board[8]]
+		cross1 = [ self.board[0], self.board[4], self.board[8]]
+		cross2 = [ self.board[2], self.board[4], self.board[6]]
+		
+
+		if (row1[0] == simple and row1[1] == simple and row1[2] == simple) or (row2[0] == simple and row2[1] == simple and row2[2] == simple) or (row3[0] == simple and row3[1] == simple and row3[2] == simple):
+			return True
+		
+		if (col1[0] == simple and col1[1] == simple and col1[2] == simple) or (col2[0] == simple and col2[1] == simple and col2[2] == simple) or (col3[0] == simple and col3[1] == simple and col3[2] == simple):
+			return True
+		
+		if (cross1[0] == simple and cross1[1] == simple and cross1[2] == simple) or (cross2[0] == simple and cross2[1] == simple and cross2[2] == simple):
+			return True
+		
+		# check even
+		for pos in self.board:
+			if pos == ' ':
+				return False
+		return 'EVEN'
 	
+
 
 
 

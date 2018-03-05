@@ -15,6 +15,54 @@ class TicTacToe:
 		print(row3)
 		print()
 	
+	def start_game(self):
+		self.reset_board()
+		current_player = self.player1
+		player1 = True
+
+		print('Welcome to the game!')
+		self.print_board()
+
+		while True:
+			if player1 == True:
+				current_player = self.player1
+			else:
+				current_player = self.player2
+
+			position = int(input(current_player["name"] + ', please choose your position from (1 to 9): '))
+			
+			if self.board[position -1] != ' ':
+				position = int(input(current_player["name"] + ', please choose blank spot from (1 to 9): '))
+		
+			self.board[position -1] = current_player["simple"]
+			
+			# check if Even Game
+			if self.check_status(current_player) == 'EVEN':
+				self.print_board()
+				print('Even Game!')
+				break
+
+			# check if Winner
+			elif self.check_status(current_player):
+				self.print_board()
+				current_player["score"] = current_player["score"] + 1
+				print('Congratulation! {} won!'.format(current_player["name"]))
+				break
+			
+			if player1 == True:
+				player1 = False
+			else: 
+				player1 = True
+			
+			self.print_board()
+		
+		self.print_score()
+
+		replay = str(input('Would you like to play again? (y /n ): ')).lower()
+
+		if replay == 'y':
+			self.start_game()
+
 	
 
 

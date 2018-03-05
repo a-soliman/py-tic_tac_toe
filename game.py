@@ -4,6 +4,17 @@ class TicTacToe:
 		self.player2 = { "name": player2, "simple": "O", "score": 0 }
 		self.board = [ " " for i in range(9)]
 	
+	def print_board(self):
+		row1 = '| {} | {} | {} |'.format(self.board[0], self.board[1], self.board[2])
+		row2 = '| {} | {} | {} |'.format(self.board[3], self.board[4], self.board[5])
+		row3 = '| {} | {} | {} |'.format(self.board[6], self.board[7], self.board[8])
+
+		print()
+		print(row1)
+		print(row2)
+		print(row3)
+		print()
+	
 	
 
 

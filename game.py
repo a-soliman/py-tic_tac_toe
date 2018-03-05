@@ -58,7 +58,7 @@ class TicTacToe:
 		
 		self.print_score()
 
-		replay = str(input('Would you like to play again? (y /n ): ')).lower()
+		replay = input('Would you like to play again? (y /n ): ').lower()
 
 		if replay == 'y':
 			self.start_game()

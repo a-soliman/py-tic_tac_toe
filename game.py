@@ -9,11 +9,7 @@ class TicTacToe:
 		row2 = '| {} | {} | {} |'.format(self.board[3], self.board[4], self.board[5])
 		row3 = '| {} | {} | {} |'.format(self.board[6], self.board[7], self.board[8])
 
-		print()
-		print(row1)
-		print(row2)
-		print(row3)
-		print()
+		print('\n{}\n{}\n{}\n'.format(row1, row2, row3))
 	
 	def start_game(self):
 		self.reset_board()
